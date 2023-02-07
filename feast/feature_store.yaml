@@ -1,0 +1,19 @@
+offline_store:
+  database: FEAST_OFFLINE_STORE
+  db_schema: public
+  host: 172.19.11.113
+  password: portal
+  port: 32668
+  type: postgres
+  user: portal
+online_store:
+  hosts:
+  - mlops-compute1.ml.neoflex.ru
+  keyspace: dognauts_feature_store
+  password: cassandra
+  port: 30042
+  type: feast_cassandra_online_store.cassandra_online_store.CassandraOnlineStore
+  username: cassandra
+project: TESTSMOKE
+provider: local
+registry: s3://dognauts-testsmoke/registry.db

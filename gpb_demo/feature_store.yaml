@@ -1,0 +1,19 @@
+offline_store:
+  database: FEAST_OFFLINE_STORE
+  db_schema: public
+  host: cassandra-postgresql.feast-db
+  password: portal
+  port: 5432
+  type: postgres
+  user: portal
+online_store:
+  hosts:
+  - cassandra.feast-db
+  keyspace: dognauts_feature_store
+  password: cassandra
+  port: 9042
+  type: feast_cassandra_online_store.cassandra_online_store.CassandraOnlineStore
+  username: cassandra
+project: GPBDEMO
+provider: local
+registry: s3://dognauts-gpbdemo/registry.db
